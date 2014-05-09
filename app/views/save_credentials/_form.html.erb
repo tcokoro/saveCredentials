@@ -1,0 +1,17 @@
+<%= form_for(@save_credential) do |f| %>
+  <% if @save_credential.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@save_credential.errors.count, "error") %> prohibited this save_credential from being saved:</h2>
+
+      <ul>
+      <% @save_credential.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
